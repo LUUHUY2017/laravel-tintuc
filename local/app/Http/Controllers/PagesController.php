@@ -16,7 +16,7 @@ class PagesController extends Controller
   function __construct()
   {
     $slide= Slide::all();
-    $tintuc= Tin::all();
+
     $theloai= Theloai::all();
 view()->share('theloai',$theloai); // chia se view nao cung co
 view()->share('slide',$slide);
@@ -74,6 +74,16 @@ $password= $request->password;
 public function getDangXuat(){
 Auth::logout();
 return redirect('/');
+}
+ function timkiem(Request $request)
+{
+  $tukhoa = $request->tukhoa;
+  $tintuc = Tin::where('TieuDe','like',"%$tukhoa%")->orwhere('TomTat','like',"%$tukhoa%")->orwhere('NoiDung','like',"%$tukhoa%")->take(30)->paginate(6); //get(); noi chuoi kieu nay cung duoc('TieuDe',like','%'.$request->tukhoa.'%');
+  return view('page.timkiem',['tukhoa'=>$tukhoa,'tintuc'=>$tintuc]);
+
+
 
 }
+
+
 }
