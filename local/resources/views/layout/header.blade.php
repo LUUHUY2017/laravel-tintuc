@@ -30,23 +30,24 @@
 			    </form>
 
 			    <ul class="nav navbar-nav pull-right">
+                         @if(Auth::check())
+                    <li>
+                    	<a>
+                    		<span class ="glyphicon glyphicon-user"></span>{{Auth::user()->email}}
+                   
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="dangxuat">Đăng xuất</a>
+                    </li>  
+                    @else         
                     <li>
                         <a href="#">Đăng ký</a>
                     </li>
                     <li>
-                        <a href="#">Đăng nhập</a>
+                        <a href="dangnhap">Đăng nhập</a>
                     </li>
-                    <li>
-                    	<a>
-                    		<span class ="glyphicon glyphicon-user"></span>
-                    		Bùi Đức Phú
-                    	</a>
-                    </li>
-
-                    <li>
-                    	<a href="#">Đăng xuất</a>
-                    </li>
-                    
+@endif
                 </ul>
             </div>
 

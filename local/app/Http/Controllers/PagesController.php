@@ -8,7 +8,7 @@ use App\Slide;
 use App\Tin;
 use App\Loaitin;
 use App\User;
-use Illuminate\Support\Facedes\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -20,6 +20,11 @@ class PagesController extends Controller
     $theloai= Theloai::all();
 view()->share('theloai',$theloai); // chia se view nao cung co
 view()->share('slide',$slide);
+if(Auth::check())
+  {
+  view()->share('nguoidung',Auth::User());
+  }
+
 }
 
 //Cách 1: fun nào cùng gội $theloai khong hay nen dung fun construct de luc nao dung pages de có $theloai
@@ -60,9 +65,15 @@ $this-> validate($request,[
 $email=$request->email;
 $password= $request->password;
   if(Auth::attempt(['email'=>$email,'password'=>$password])) //($data)  cot email tro gia tri cho email $email
-      return view('welcome',['user'=>Auth::user()]);
+      return redirect('/');
+      else
+        return redirect('dangnhap')->with('thongbao','Đăng nhập không thành công');
 
+}
 
+public function getDangXuat(){
+Auth::logout();
+return redirect('/');
 
 }
 }

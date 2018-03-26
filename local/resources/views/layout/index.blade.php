@@ -36,7 +36,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="local/public/font/js/bootstrap.min.js"></script>
     <script src="local/public/font/js/my.js"></script> 
-        {{-- <script src="https://uhchat.net/code.php?f=f1ac71"></script> {{--  nut chat mobie --}}
+        {{-- <script src="https://uhchat.net/code.php?f=f1ac71"></script>  nut chat mobie --}}
 	@yield('script')
 </body>
 
