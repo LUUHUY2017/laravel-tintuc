@@ -20,10 +20,10 @@ Route::get('tin','TinController@index');
 
 
 // rieng bài hoàn chỉnh
+//backend
 Route::get('admin/dangnhap','DangNhapAdminController@getDangNhapAdmin');
 Route::post('admin/dangnhap','DangNhapAdminController@postDangNhapAdmin');
 Route::get('admin/logout','DangNhapAdminController@getLogoutAdmin');
-
 
 Route::group(['prefix'=>'admin','middleware'=>'adminMiddleware'],function(){
 	Route::get('/',function(){
@@ -60,7 +60,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminMiddleware'],function(){
 	});
 });
 
-
+//fontend
 Route::get('/','PagesController@trangchu');
 Route::get('lienhe','PagesController@lienhe');
 Route::get('loaitin/{id}/{TenKhongDau}.html','PagesController@loaitin');
