@@ -10,7 +10,7 @@
         <a class="navbar-brand" href="{{url('admin/')}}">Admin Area - Khoa Phạm</a> {{-- route('a') --}}
     </div>
     <!-- /.navbar-header -->
-     <ul class="nav navbar-top-links navbar-right">
+     <ul class="nav floatright navbar-top-links navbar-right">
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -35,3 +35,4 @@
     <!-- /.navbar-top-links -->
     @include('admin.layout.menu')
 </nav>
+{{-- <marquee>Đây là trang quản trị của website</marquee> --}}

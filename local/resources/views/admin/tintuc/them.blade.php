@@ -52,11 +52,13 @@
                     </div>
                     <div class="form-group">
                         <label>Tóm Tắt</label>
-                        <textarea id="demo" class="form-control ckeditor" name="TomTat" rows="2"></textarea>
+                        <textarea id="TomTat" class="form-control ckeditor" name="TomTat" rows="2"></textarea>
+              
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
-                        <textarea id="demo" class="form-control ckeditor" name="NoiDung"  rows="5"></textarea>
+                        <textarea id="NoiDung" class="form-control ckeditor" name="NoiDung"  rows="5"></textarea>
+                
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>

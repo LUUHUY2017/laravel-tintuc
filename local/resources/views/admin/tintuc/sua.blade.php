@@ -62,59 +62,61 @@
                     </div>
                     <div class="form-group">
                         <label>Tóm Tắt</label>
-                        <textarea id="demo" class="form-control ckeditor" name="TomTat" rows="2">
+                        <textarea id="demo" class="form-control ckeditor" name="TomTat" rows="3" >
                             {{$tin->TomTat}}
                         </textarea>
+                  
                     </div>
                     <div class="form-group">
                         <label>Nội Dung</label>
-                        <textarea id="demo" class="form-control ckeditor" name="NoiDung"  rows="5">
+                        <textarea id="demo" class="form-control ckeditor" name="NoiDung" >
                             {{$tin->NoiDung}}        
                         </textarea>
+   
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
                         <p>  <img width="400px;" src="uploads/tintuc/{{$tin->Hinh}}" ></p>
                         <input type="file" name="Hinh" class="form-control" />
-              
-                    </div>
-                        <div class="form-group">
-                              <label>Nổi Bật</label>
-                            <label class="radio-inline">
-                                <input name="NoiBat" value="0" @if($tin->NoiBat==0) 
-                                {{"checked"}}
-                                @endif type="radio">Không
-                            </label>
 
-                            <label class="radio-inline">
-                                <input name="NoiBat" value="1"  @if($tin->NoiBat==1) 
-                                {{"checked"}}
-                                @endif type="radio">Có
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Sửa</button>
-                        <button type="reset" class="btn btn-default">Làm mới</button>
-                        @csrf
-                        <form>
-                        </div>
                     </div>
-                    <!-- /.row -->
+                    <div class="form-group">
+                        <label>Nổi Bật</label>
+                        <label class="radio-inline">
+                            <input name="NoiBat" value="0" @if($tin->NoiBat==0) 
+                            {{"checked"}}
+                            @endif type="radio">Không
+                        </label>
+
+                        <label class="radio-inline">
+                            <input name="NoiBat" value="1"  @if($tin->NoiBat==1) 
+                            {{"checked"}}
+                            @endif type="radio">Có
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Sửa</button>
+                    <button type="reset" class="btn btn-default">Làm mới</button>
+                    @csrf
+                    <form>
+                    </div>
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /.row -->
             </div>
-            <!-- /#page-wrapper -->
-            @endsection
-            @section('script')
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $("#theloai").change(function(){
-                        var idTheLoai = $(this).val();
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        @endsection
+        @section('script')
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#theloai").change(function(){
+                    var idTheLoai = $(this).val();
 
-                        $.get("admin/ajax/loaitin/"+idTheLoai,function(data){
-                            $("#loaitin").html(data);
-                        });
+                    $.get("admin/ajax/loaitin/"+idTheLoai,function(data){
+                        $("#loaitin").html(data);
                     });
                 });
+            });
 
-            </script>
-            @endsection
+        </script>
+        @endsection

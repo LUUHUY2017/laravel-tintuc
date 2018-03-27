@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+        <meta http-equiv="refresh" content="15" >  {{-- lam moi trang --}}
     <title>Báo Việt Nam | @yield('title')</title>
 	<base href="{{asset('')}}">
     <!-- Bootstrap Core CSS -->
