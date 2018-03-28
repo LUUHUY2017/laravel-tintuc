@@ -20,6 +20,7 @@
             </div>
             
             <!-- /.col-lg-12 -->
+            <div class="table-responsive ">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead class="alert alert-success">
                     <tr align="center"  >
@@ -50,6 +51,7 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
         </div>
         <!-- /.row -->
     </div>

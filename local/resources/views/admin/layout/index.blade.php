@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
     <meta name="author" content="">
- 
+
     <title>Admin | @yield('title')</title>
     <base href="{{asset('')}}">
     <!-- Bootstrap Core CSS -->
@@ -30,19 +30,36 @@
 
 </head>
 <body>
+    <style type="text/css">
+        #back-top {
+  border-radius: 5px;
+  color: black;
+  background: #d0b6b6;
+  padding: 10px;
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  display: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+    </style>
 
     <div id="wrapper">
 
         @include('admin.layout.header')
 
         @yield('content')
-
+       <div id="back-top"><i class="fa fa-arrow-up"></i></div>
     </div>
+
+
     <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="local/public/bower_components/jquery/dist/jquery.min.js"></script>
-       
+
     <!-- Bootstrap Core JavaScript -->
     <script src="local/public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -68,15 +85,30 @@
     </script>
 
     @yield('script')
-   <script>  
 
-
-     
-        // Cấu hình lại màu nền giao diện.
-        CKEDITOR.config.uiColor = '#5fb435';
-        CKEDITOR.config.resize_enabled = false;
- 
-    </script>
+{{-- nut back --}}
+<script type="text/javascript">
+    $(document).ready(function() 
+    {
+         $(window).scroll(function()
+         {
+          if ($(this).scrollTop() > 100)
+           {
+             $('#back-top').fadeIn();
+             } 
+        else 
+             {
+               $('#back-top').fadeOut();
+               }
+                  });
+  // scroll body to 0px on click
+        $('#back-top').click(function() 
+              {
+             $('body,html').animate({scrollTop: 0}, 500);
+                 return false;
+              });
+                });
+</script>
 </body>
 
 </html>

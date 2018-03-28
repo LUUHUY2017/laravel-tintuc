@@ -17,7 +17,7 @@
 	            	<div class="panel-body">
 
 	            		@foreach($theloai as $tl)
-	            			@if(count($tl->tintuc)>0)   {{--  do lien ket trong model::: nếu thể laoai trong tin tuc ma > 0 thi lay ra   --}}
+	            			@if(count($tl->tintuc)>1)   {{--  do lien ket trong model::: nếu thể laoai trong tin tuc ma > 0 thi lay ra   --}}
 
 	            		<!-- item -->
 					    <div class="row-item row">
@@ -32,13 +32,12 @@
 					<?php  
 							$data= $tl->tintuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
 							$tin1= $data->shift();  // lay 1 trong $data  trả về  dạng mản nên {{$tin1['Hinh']}}******
-
-
 					?>
+					
 		                	</h3>
 		                	<div class="col-md-8 border-right">
 		                		<div class="col-md-5">
-			                        <a href="detail.html">
+			                        <a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html">
 			                            <img  class="img-responsive" src="uploads/tintuc/{{$tin1['Hinh']}}" alt="">  
 			                        </a>
 			                    </div>

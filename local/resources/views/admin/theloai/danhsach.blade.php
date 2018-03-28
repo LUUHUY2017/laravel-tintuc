@@ -15,6 +15,7 @@
                 {{session('thongbao')}}
             </div>
             @endif
+            <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead class="alert-success">
                     <tr align="center">
@@ -38,6 +39,7 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
         </div>
         <!-- /.row -->
     </div>

@@ -34,7 +34,7 @@
                          @if(Auth::check())
                     <li>
                     	<a>
-                    		<span class ="glyphicon glyphicon-user"></span>{{Auth::user()->email}}
+                    		<span class ="glyphicon glyphicon-user"></span> &nbsp; {{Auth::user()->email}}
                    
                     	</a>
                     </li>

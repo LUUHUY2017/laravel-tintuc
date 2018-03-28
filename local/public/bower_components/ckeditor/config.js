@@ -4,6 +4,7 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+	config.uiColor = '#5fb435';
     config.filebrowserBrowseUrl = './local/public/bower_components/ckeditor/ckfinder/ckfinder.html';
     config.filebrowserImageBrowseUrl = './local/public/bower_components/ckeditor/ckfinder/ckfinder.html?type=Images';
     config.filebrowserFlashBrowseUrl = './local/public/bower_components/ckeditor/ckfinder/ckfinder.html?type=Flash';
