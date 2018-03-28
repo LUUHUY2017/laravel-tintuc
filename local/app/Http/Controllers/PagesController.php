@@ -8,7 +8,7 @@ use App\Slide;
 use App\Tin;
 use App\Loaitin;
 use App\User;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;   
 
 class PagesController extends Controller
 {

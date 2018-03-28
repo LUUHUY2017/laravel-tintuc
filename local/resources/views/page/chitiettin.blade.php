@@ -33,7 +33,7 @@
                 <hr>
 
                 <!-- Blog Comments -->
-
+    @if(Auth::check())
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Viết bình luận ...<span class="glyphicon glyphicon-pencil"></span></h4>
@@ -44,9 +44,8 @@
                         <button type="submit" class="btn btn-primary">Gửi</button>
                     </form>
                 </div>
-
-                <hr>
-
+                <hr>          
+    @endif
                 <!-- Posted Comments -->
 
                 <!-- Comment -->

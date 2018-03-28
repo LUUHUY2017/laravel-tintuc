@@ -12,7 +12,7 @@ class Tin extends Model
     return $this->belongsTo('App\Loaitin','idLoaiTin','id');
 
     }
-    // public function comment(){
-    // 	$this->hasMany('App\Comment','idTinTuc','id');
-    // }
+public function comment(){
+ 	$this->hasMany('App\Comment','idTinTuc','id');
+}
 }

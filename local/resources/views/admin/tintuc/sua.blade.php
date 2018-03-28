@@ -46,15 +46,14 @@
                     <div class="form-group">
                         <label class="control-label">Loại Tin</label>
                         <select class="form-control" id="loaitin" name="LoaiTin">
-                            @foreach($loaitin as $lt)
+                        @foreach($loaitin as $lt)
                             <option 
-
-                            @if(@$tin->loaitin->id == $lt->id)
+                         @if(@$tin->loaitin->id == $lt->id)
                             {{"selected"}}
-                            @endif
-
-                            value="{{$lt->id}}">{{$lt->Ten}}</option>
-                            @endforeach
+                        @endif
+                              value="{{$lt->id}}">
+                            {{$lt->Ten}} </option>
+                        @endforeach
                         </select>
                     </div>
                     <div class="form-group">
@@ -108,7 +107,7 @@
         <!-- /#page-wrapper -->
         @endsection
         @section('script')
-        <script type="text/javascript">
+        <script type="text/javascript">  // de khi chonj theerlaoij sex ra loaj tin cuar nos
             $(document).ready(function(){
                 $("#theloai").change(function(){
                     var idTheLoai = $(this).val();
