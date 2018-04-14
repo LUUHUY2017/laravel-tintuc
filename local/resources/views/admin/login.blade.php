@@ -42,8 +42,9 @@
                 </div>
                 @endif
                      @if(session('thongbao'))
-                     <div class="alert alert-danger">       {{session('thongbao')}}</div>
-             
+                     <div class="alert alert-danger"> 
+					 {{session('thongbao')}}
+					 </div>
                      @endif
                         <form role="form" action="admin/dangnhap" method="POST">
                             <fieldset>

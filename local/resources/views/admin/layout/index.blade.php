@@ -109,6 +109,11 @@
               });
                 });
 </script>
+<script type="text/javascript">
+    function xacnhan(){
+        return confirm("Bạn có đồng ý xóa?")
+    }
+</script>
 </body>
 
 </html>

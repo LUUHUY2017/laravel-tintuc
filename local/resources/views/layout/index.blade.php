@@ -25,14 +25,6 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-</head>
-
-<body>
-    @include('layout.header')
-    @yield('content')
-    @include('layout.footer')
-    <div id="back-top"><i class="fa fa-arrow-up"></i> </div>
     <style type="text/css">
     #back-top{
         border-radius: 5px;
@@ -48,6 +40,13 @@
         opacity:0.5;
     }
 </style>
+</head>
+<body>
+    @include('layout.header')
+    @yield('content')
+    @include('layout.footer')
+    <div id="back-top"><i class="fa fa-arrow-up"></i> </div>
+
 <!-- jQuery -->
 <script src="local/public/font/js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->

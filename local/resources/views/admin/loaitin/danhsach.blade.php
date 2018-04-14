@@ -45,7 +45,7 @@
                             {{@$ltin->Theloai->Ten}}
                             @endif
                         </td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/loaitin/xoa/{{$ltin->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick="return xacnhan()" href="admin/loaitin/xoa/{{$ltin->id}}"> Delete</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/loaitin/sua/{{$ltin->id}}">Edit</a></td>
                     </tr>
                     @endforeach

@@ -15,7 +15,6 @@
                 {{session('thongbao')}}
             </div>
             @endif
-            <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead class="alert-success">
                     <tr align="center">
@@ -33,13 +32,12 @@
                         <td>{{$lt->Ten}}</td>
                         <td>{{$lt->TenKhongDau}}</td>
                         
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/theloai/xoa/{{$lt->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a onclick="return xacnhan()" href="admin/theloai/xoa/{{$lt->id}}"> Delete</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/theloai/sua/{{$lt->id}}">Edit</a></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-        </div>
         </div>
         <!-- /.row -->
     </div>

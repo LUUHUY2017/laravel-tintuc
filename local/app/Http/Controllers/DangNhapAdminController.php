@@ -12,7 +12,7 @@ class DangNhapAdminController extends Controller
 //
 	public function getDangNhapAdmin()
 	{
-		return view('admin/login');
+		return view('admin.login');
 	}
 	public function postDangNhapAdmin(Request $request){
 		$this->validate($request,[

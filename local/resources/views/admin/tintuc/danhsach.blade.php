@@ -23,6 +23,7 @@
             <table class="table table-striped table-bordered table-hover " id="dataTables-example">
                 <thead>
                     <tr align="center">
+					  <th>STT</th>
                         <th>ID</th>
                           <th>Ảnh</th>
                         <th>Tiêu Đề</th>
@@ -40,8 +41,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($tint as $tin)                  
+                    @foreach($tint as $key => $tin)                  
                       <tr class="odd gradeX" align="center">
+					     <td>{{++$key}}</td>
                         <td>{{$tin->id}}</td>
                             <td><img width="100px" src="uploads/tintuc/{{$tin->Hinh}}"></td>
                         <td>{{$tin->TieuDe}}</td>
@@ -59,7 +61,7 @@
                         <td>{{@$tin->loaitin->Theloai->Ten}}</td>
                         <td>{{@$tin->Loaitin->Ten}}</td>
 
-                        <td  class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{$tin->id}}"> Delete</a></td>
+                        <td  class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{$tin->id}}" onclick="return xacnhan()"> Delete</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tintuc/sua/{{$tin->id}}">Edit</a></td>
                     </tr>
                     @endforeach
