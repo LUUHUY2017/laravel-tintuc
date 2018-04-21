@@ -27,11 +27,8 @@
                         <th>ID</th>
                           <th>Ảnh</th>
                         <th>Tiêu Đề</th>
-                       
                          <th>Tóm Tắt</th>
                          <th>Nội Dung</th>
-                        
-                      
                         <th>Nổi Bật</th>
                         <th>Số Lượt Xem</th>
                         <th>Thể Loại</th>
@@ -58,7 +55,7 @@
                         @endif
                         </td>
                         <td>{{$tin->SoLuotXem}}</td>
-                        <td>{{@$tin->loaitin->Theloai->Ten}}</td>
+                        <td>{{@$tin->loaitin->theloai->Ten}}</td>
                         <td>{{@$tin->Loaitin->Ten}}</td>
 
                         <td  class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{$tin->id}}" onclick="return xacnhan()"> Delete</a></td>

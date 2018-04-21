@@ -31,14 +31,14 @@
                     </div>
                     <div class="form-group">
                         <label>Thể Loại</label>
-                        <select class="form-control" name="Theloai">
+                        <select class="form-control" name="Theloai" >
                            @foreach($theloai as $tl)
-                            <option  @if($tl->id==$loaitin->idTheLoai) {{"selected"}}  @endif
-                             value="{{$tl->id}}" >  {{$tl->Ten}}  </option>
+                            <option  @if($tl->id==$loaitin->idTheLoai) {{"selected"}} 
+							@endif
+                             value="{{$tl->id}}" > {{$tl->Ten}}  </option>
                             @endforeach
                         </select>
                     </div>
-
                     <button type="submit" class="btn btn-primary">Sửa </button>
                     <button type="reset" class="btn btn-success">Làm Mới</button>
                     @csrf

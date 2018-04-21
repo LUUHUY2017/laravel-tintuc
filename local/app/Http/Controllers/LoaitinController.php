@@ -45,9 +45,8 @@ class LoaitinController extends Controller
 		$loaitin= Loaitin::find($id);
 		$theloai=Theloai::all();
 		return view('admin/loaitin/sua',['loaitin'=>$loaitin,'theloai'=>$theloai]);
-
 	}
-	public function postSua(Request $request,$id){
+	public function postSua(Request $request, $id){
 		{
       $loaitin=Loaitin::find($id);
       $this->validate($request,[

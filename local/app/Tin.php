@@ -13,6 +13,6 @@ class Tin extends Model
 
     }
 public function comment(){
- 	$this->hasMany('App\Comment','idTinTuc','id');
+ 	 return $this->hasMany('App\Comment','idTinTuc','id');
 }
 }

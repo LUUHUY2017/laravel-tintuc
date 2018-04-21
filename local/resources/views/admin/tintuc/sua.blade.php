@@ -83,15 +83,19 @@
                     <div class="form-group">
                         <label class="control-label ">Nổi Bật</label>
                         <label class="radio-inline">
-                            <input name="NoiBat" value="0" @if($tin->NoiBat==0) 
+                            <input name="NoiBat" value="0" 
+							@if($tin->NoiBat==0) 
                             {{"checked"}}
-                            @endif type="radio">Không
+                            @endif type="radio">
+							Không
                         </label>
 
                         <label class="radio-inline">
-                            <input name="NoiBat" value="1"  @if($tin->NoiBat==1) 
+                            <input name="NoiBat" value="1" 
+							@if($tin->NoiBat==1) 
                             {{"checked"}}
-                            @endif type="radio">Có
+                            @endif type="radio">
+							Có
                         </label>
                     </div>
                     <button type="submit" class="btn btn-default">Sửa</button>
