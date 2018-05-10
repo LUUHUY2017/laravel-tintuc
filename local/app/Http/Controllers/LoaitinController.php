@@ -50,13 +50,12 @@ class LoaitinController extends Controller
 		{
       $loaitin=Loaitin::find($id);
       $this->validate($request,[
-            'Ten'=>'required|unique:Loaitin,Ten|min:3|max:100','Theloai'=>'required'
+            'Ten'=>'required|min:3|max:100','Theloai'=>'required'
       ],
       [
              'Ten.required'=> 'Bạn chưa nhập tên thể loại',
              'Ten.min' =>'Tên loại tin phải có đội dài từ 3 đến 100 kí tự',
-             'Ten.max'=> 'Tên loại tin phải có đội dài từ 3 đến 100 kí tự',
-             'Ten.unique'=>'Tên loại tin đã tồn tại',
+             'Ten.max'=> 'Tên loại tin phải có đội dài từ 3 đến 100 kí tự',   
              'Theloai'=>'Bạn chưa nhập thể  loại'
 ]);
   

@@ -15,7 +15,13 @@
                         Tìm Kiếm :{{$tukhoa}}
                     </b></h4>
                 </div>
-                @foreach($tintuc as $tt)
+				@if(count($tintuc)== 0)   =>>   {$tintuc->count()== 0} or  {count($tintuc)== 0}  
+				va kieu nay elseif(count($tintuc)) cung duoc elseif(count($tintuc) != 0) neu co bai
+				<p>Không có tin tức nào được tìm thấy</p>
+					@elseif(count($tintuc) != 0)
+					Tìm Kiếm thấy:{{count($tintuc)}} tin tức ________________{$tintuc->count()} or {count($tintuc)}
+					@endif
+                @foreach($tintuc as $tt)		
                 <div class="row-item row">
                     <div class="col-md-3">
 

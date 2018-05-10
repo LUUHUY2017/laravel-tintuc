@@ -64,6 +64,7 @@ class TinTucController extends Controller
                 $Hinh= str_random(4)."_".$name;
             }
             $file->move("uploads/tintuc",$Hinh);
+         unlink("uploads/tintuc/".$tintuc->Hinh); //xoa anh cu trong file
             $tintuc->Hinh=$Hinh;
         }
         else
@@ -107,7 +108,7 @@ public function postSua(Request $request,$id)
     $tintuc->idLoaiTin = $request->LoaiTin;
     $tintuc->TomTat= $request->TomTat;
     $tintuc->NoiDung= $request->NoiDung;
-           $tintuc->NoiBat= $request->NoiBat;
+    $tintuc->NoiBat= $request->NoiBat;
     $tintuc->SoLuotXem = 0;
     if($request->hasFile('Hinh'))
     {

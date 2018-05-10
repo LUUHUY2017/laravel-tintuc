@@ -39,10 +39,10 @@ function lienhe(){
 }
 function loaitin($id){
   $loaitin= Loaitin::find($id);
-  $tintuc= Tin::where('idLoaiTin',$id)->paginate(15);// tim bang tin voi cot idLoaiTin theo id nhap vao	
+  $tintuc= Tin::where('idLoaiTin',$id)->paginate(3);// tim bang tin voi cot idLoaiTin theo id nhap vao	
 return view('page.loaitin',['loaitin'=>$loaitin,'tintuc'=>$tintuc]);
 }
-public function tintuc($id){
+public function tintuc($id,$TenKhongDau){
   $tintuc= Tin::find($id);
   $tinnoibat= Tin::where('NoiBat',1)->take(4)->get();
   $tinlienquan= Tin::where('idLoaiTin',$tintuc->idLoaiTin)->take(5)->get();
@@ -77,7 +77,7 @@ public function getDangXuat(){
 }
 function timkiem(Request $request)
 {
-  $tukhoa = $request->tukhoa;
+  $tukhoa = $request->input('tukhoa');
 $tintuc = Tin::where('TieuDe','like',"%$tukhoa%")->orwhere('TomTat','like',"%$tukhoa%")->orwhere('NoiDung','like',"%$tukhoa%")->take(30)->paginate(6); //get(); noi chuoi kieu nay cung duoc('TieuDe',like','%'.$request->tukhoa.'%');
 return view('page.timkiem',['tukhoa'=>$tukhoa,'tintuc'=>$tintuc]);
 

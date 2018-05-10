@@ -70,3 +70,29 @@ Route::get('dangnhap','PagesController@getDangNhap');
 Route::post('dangnhap','PagesController@postDangNhap');
 Route::get('dangxuat','PagesController@getDangXuat');
 Route::get('timkiem','PagesController@timkiem');
+ //tim kiem thweo phuong thuc get thi request dl dang url
+// con post thi khong url ma ma dang ngam form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

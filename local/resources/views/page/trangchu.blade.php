@@ -22,23 +22,23 @@
 	            		<!-- item -->
 					    <div class="row-item row">
 		                	<h3>
-		                		<a href="tintuc/{{$tl->id}}/{{$tl->TenKhongDau}}.html">{{$tl->Ten}}</a> 
+		                		{{$tl->Ten}}
 		                	@foreach($tl->loaitin as $lt)	
 
-		                	<small><a href="tintuc/{{$tl->id}}/{{$tl->TenKhongDau}}.html"><i>{{$lt->Ten}}</i></a>/</small>
+		                	<small><a href="loaitin/{{$lt->id}}/{{$lt->TenKhongDau}}.html"><i>{{$lt->Ten}}</i></a>/</small>
 
 		                	@endforeach
-
+							</h3>
 					<?php  
 							$data= $tl->tintuc->where('NoiBat',1)->sortByDesc('created_at')->take(5);
 							$tin1= $data->shift();  // lay 1 trong $data  trả về  dạng mản nên {{$tin1['Hinh']}}******
 					?>
 					
-		                	</h3>
+		                
 		                	<div class="col-md-8 border-right">
 		                		<div class="col-md-5">
 			                        <a href="tintuc/{{$tin1['id']}}/{{$tin1['TieuDeKhongDau']}}.html">
-			                            <img  class="img-responsive" src="uploads/tintuc/{{$tin1['Hinh']}}" alt="">  
+			                            <img class="img-responsive" src="uploads/tintuc/{{$tin1['Hinh']}}" alt="">  
 			                        </a>
 			                    </div>
 

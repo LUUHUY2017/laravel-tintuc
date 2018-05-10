@@ -115,7 +115,6 @@
             $(document).ready(function(){
                 $("#theloai").change(function(){
                     var idTheLoai = $(this).val();
-
                     $.get("admin/ajax/loaitin/"+idTheLoai,function(data){
                         $("#loaitin").html(data);
                     });
