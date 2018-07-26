@@ -19,7 +19,6 @@ class LoaitinController extends Controller
 	}
 	public function getThem(){
 		$theloai = Theloai::all();
-
 		return view('admin/loaitin/them',['theloai'=>$theloai]);
 	}
 	public function postThem(Request $request){
@@ -38,6 +37,9 @@ class LoaitinController extends Controller
 		$loaitin -> TenKhongDau = changeTitle($request->Ten);
 		$loaitin->idTheLoai = $request->Theloai;
 		$loaitin->save();
+		// $theloai = new Theloai;
+		// $theloai->Ten = $request->Ten;  //Thêm vào 2 bảng 1 sự kiện clck
+		// $theloai->save();
 		return redirect('admin/loaitin/them')->with('thongbao','Thêm thành công');
 
 	}

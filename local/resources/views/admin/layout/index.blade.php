@@ -30,7 +30,7 @@
 
 </head>
 <body>
-    <style type="text/css">
+  <style type="text/css">
         #back-top {
   border-radius: 5px;
   color: black;
@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 
-    </style>
+ </style>
 
     <div id="wrapper">
 
@@ -115,5 +115,4 @@
     }
 </script>
 </body>
-
 </html>

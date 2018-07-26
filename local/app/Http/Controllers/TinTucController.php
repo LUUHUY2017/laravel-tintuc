@@ -64,7 +64,6 @@ class TinTucController extends Controller
                 $Hinh= str_random(4)."_".$name;
             }
             $file->move("uploads/tintuc",$Hinh);
-         unlink("uploads/tintuc/".$tintuc->Hinh); //xoa anh cu trong file
             $tintuc->Hinh=$Hinh;
         }
         else
@@ -129,7 +128,7 @@ public function postSua(Request $request,$id)
              }
 
           $file->move("uploads/tintuc",$Hinh); // vi tri luu file anh
-            // unlink("uploads/tintuc/".$tintuc->Hinh);// xoas file anh cu TRONG THU MUC
+            //unlink("uploads/tintuc/".$tintuc->Hinh);// xoas file cũ trong thu muc_ neu khong có anh truoc khi sua se bi loi
         $tintuc->Hinh= $Hinh; // luu hinh moi
     }
         $tintuc->save();

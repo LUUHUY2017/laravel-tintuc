@@ -78,6 +78,7 @@
 //
 $(window).scroll(function()
 {
+     // if( $(this).scrollTop() > $('#sidebar').offset().top)
     if( $(this).scrollTop() > 390)
     {
         $("#sidebar").addClass("fix-box"); //class tạo cho no khi croll
@@ -86,7 +87,7 @@ $(window).scroll(function()
              $("#sidebar").removeClass("fix-box");
              } 
     });
-
+  
 });
 
 

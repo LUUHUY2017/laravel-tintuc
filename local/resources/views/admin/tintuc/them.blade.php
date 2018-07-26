@@ -62,7 +62,8 @@
                     </div>
                     <div class="form-group">
                         <label>Hình Ảnh</label>
-                        <input type="file" name="Hinh" class="form-control>
+                        <input type="file" name="Hinh" class="form-control">
+                    </div>
                         <div class="form-group">
                             <label>Nổi Bật</label>
                             <label class="radio-inline">

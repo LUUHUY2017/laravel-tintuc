@@ -39,7 +39,7 @@
                     <!-- Pagination -->
                     <div class="row text-center">
                         <div class="col-lg-12">
-                                   {{ $tintuc->links() }}
+                                   {{ $tintuc->appends(['dung_appends-mang_phay_truyen_phay-tham-so_truoc _link'=>str_random(4)])->fragment('sau')->links() }}
                         </div>
                     </div>
                     <!-- /.row -->

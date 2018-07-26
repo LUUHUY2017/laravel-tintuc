@@ -19,7 +19,7 @@
                 </p>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="uploads/tintuc/{{$tintuc->Hinh}}" alt="">
+         <a href="uploads/tintuc/{{$tintuc->Hinh}}"><span style="color: red">{{$tintuc->Hinh}}</span></a>       <img class="img-responsive" src="uploads/tintuc/{{$tintuc->Hinh}}" alt="">
 
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Posted on: {{$tintuc->created_at}}</p>

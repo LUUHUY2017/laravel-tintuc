@@ -13,7 +13,7 @@
 
 
 Route::get('thunhap',function(){return view('dangnhap'); });
-Route::post('login','LoginController@postLogin')->name('loginpost');
+Route::post('login','LoginController@postLogin')->name('loginpost');// la return redirect->route('loginpost') khong van chám ;  và cái cái name nay bang voi ['as'=>'tenroute','uses'=>'PacgeContrep@grtrtrtr']
 Route::get('logout','LoginController@logout');
 // paginate(25)
 Route::get('tin','TinController@index');

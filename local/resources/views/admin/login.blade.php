@@ -25,7 +25,57 @@
 </head>
 
 <body>
-
+    <style type="text/css">
+        body{
+            background-image: url('uploads/slide/1.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .login-panel{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+                background: rgba(0, 0, 0, 0.6);
+            opacity: 0.8;
+        }
+        .panel-title{
+            background: transparent;
+            text-align: center;
+            border-color: gray;
+            padding-bottom: 26px;
+            padding-top: 7px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .panel{
+          box-shadow: 0 1px 5px 0 gray;
+        }
+        .panel-default>.panel-heading, .panel-body input {
+           color: white;
+           background-color: transparent;
+           border-color: #ddd;
+           
+           border: unset;
+           border-radius: unset;
+                }
+        .panel-body input{
+            outline: unset;
+            border: unset;
+            border-bottom: 1px solid red;
+        }
+         .panel-body input:focus{
+            outline: unset;
+            border: unset;
+            border-bottom: 1px solid red;
+            box-shadow: unset;
+        }
+         .panel-body input:focus{
+            border-bottom: translateX(-5px;)
+         }
+    </style>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">

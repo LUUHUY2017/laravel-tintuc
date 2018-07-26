@@ -21,9 +21,9 @@ class PagesController extends Controller
 view()->share('theloai',$theloai); // chia se view nao cung co
 view()->share('slide',$slide);
 if(Auth::check())
-  {
-    view()->share('nguoidung',Auth::User());
-  }
+{
+  view()->share('nguoidung',Auth::User());
+}
 
 }
 
@@ -39,7 +39,7 @@ function lienhe(){
 }
 function loaitin($id){
   $loaitin= Loaitin::find($id);
-  $tintuc= Tin::where('idLoaiTin',$id)->paginate(3);// tim bang tin voi cot idLoaiTin theo id nhap vao	
+  $tintuc= Tin::where('idLoaiTin',$id)->paginate(6);// tim bang tin voi cot idLoaiTin theo id nhap vao	
 return view('page.loaitin',['loaitin'=>$loaitin,'tintuc'=>$tintuc]);
 }
 public function tintuc($id,$TenKhongDau){

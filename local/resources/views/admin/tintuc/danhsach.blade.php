@@ -42,7 +42,7 @@
                       <tr class="odd gradeX" align="center">
 					     <td>{{++$key}}</td>
                         <td>{{$tin->id}}</td>
-                            <td><img width="100px" src="uploads/tintuc/{{$tin->Hinh}}"></td>
+                            <td><img width="100px" src="{{url('uploads/tintuc/'.$tin->Hinh)}}"></td>{{-- src="uploads/tintuc/{{$tin->Hinh}}"></td> --}}
                         <td>{{$tin->TieuDe}}</td>
                         
                         <td>{!!$tin->TomTat!!}</td>
